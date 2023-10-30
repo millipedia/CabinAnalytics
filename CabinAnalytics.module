@@ -2,6 +2,17 @@
 
 namespace ProcessWire;
 
+/**
+ * CabinAnalytics
+ * 
+ * Add a page to your ProcessWire admin area which
+ * embeds a public dashboard from Cabin Analytics
+ * 
+ * 
+ */
+
+
+
 class CabinAnalytics extends Process implements Module, ConfigurableModule
 {
 
@@ -9,7 +20,7 @@ class CabinAnalytics extends Process implements Module, ConfigurableModule
   {
     return [
       'title' => 'CabinAnalytics',
-      'summary' => 'Simple iframe wrapper around a Cabin Analytics dashboard for disaply in admin.',
+      'summary' => 'Add a page to your ProcessWire admin area with an embeded public dashboard from Cabin Analytics',
       'author' => 'Stephen at millipedia.com',
       'version' => 1,
 
@@ -66,6 +77,7 @@ class CabinAnalytics extends Process implements Module, ConfigurableModule
     $f = wire('modules')->get('InputfieldText');
     $f->attr('name', 'ca_user_code');
     $f->label = 'Cabin dashboard user code';
+	$f->notes = 'This is the unique dashboard code at the end of your withcabin.com/public/ dashboard URL.';
     $f->required = true;
     $f->attr('value', $data['ca_user_code']);
     $inputfields->add($f);

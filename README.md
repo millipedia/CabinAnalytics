@@ -7,4 +7,6 @@ It has a single congfigurable field so far which is just the public dashboard id
 
 It doesn't render the front end script tag cos hey, it's only a single line - you can paste it in yourself.
 
-The module was inspired by Craigs [WayFathomAnalytics](https://processwire.com/modules/way-fathom-analytics/) module .... but is a lot simpler.
+The module was inspired by Craig's [WayFathomAnalytics](https://processwire.com/modules/way-fathom-analytics/) module .... but is a lot simpler.
+
+stephen at [millipedia.com](https://millipedia.com)
