@@ -97,16 +97,13 @@ class CabinAnalytics extends Process implements Module, ConfigurableModule
     } else {
 
       $dashboard_url = 'https://withcabin.com/public/' . $this->cabin_dashboard_code;
-      $style = 'width:1px;min-width:100%;height:1000px;max-width:1100px';
+      $style = 'width:100%;min-width:100%;height:1000px;max-width:1100px;display:block !important;';
       $iframe = "<iframe id='cabin_analytics_iframe' src='{$dashboard_url}' style='{$style}' frameborder='0' ></iframe>";
 
       $admin_page_markup .= "<div class='wrapper'>{$iframe}</div>";
 
       $admin_page_markup .= '<p>Open your <a href="' . $dashboard_url . '" target="_new"> your analytics dashboard in a new tab.</a></p>.';
     }
-
-
-
 
     return $admin_page_markup;
   }
